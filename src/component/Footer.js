@@ -34,20 +34,20 @@ const Footer = () => {
     <div className="footer">
       <ul>
         카테고리
-        {footerMenu.map((item) => (
-          <li>{item}</li>
+        {footerMenu.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
       <ul>
         기업 정보
-        {corporateInfo.map((item) => (
-          <li>{item}</li>
+        {corporateInfo.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
       <ul>
         고객 지원
-        {support.map((item) => (
-          <li>{item}</li>
+        {support.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>

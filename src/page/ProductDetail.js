@@ -13,13 +13,13 @@ const ProductDetail = () => {
     let url = `https://my-json-server.typicode.com/EUNHEE47/HNM/products/${id}`;
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
+    // console.log(data);
     setProduct(data);
   };
 
   const likeToggle = () => {
     setHeart(!heart);
-    console.log(heart);
+    // console.log(heart);
   };
 
   useEffect(() => {
@@ -51,8 +51,10 @@ const ProductDetail = () => {
 
               <Dropdown.Menu>
                 {product?.size.length > 0 &&
-                  product.size.map((item) => (
-                    <Dropdown.Item href="#/action-1">{item}</Dropdown.Item>
+                  product.size.map((item, index) => (
+                    <Dropdown.Item href="#/action-1" key={index}>
+                      {item}
+                    </Dropdown.Item>
                   ))}
               </Dropdown.Menu>
             </Dropdown>
